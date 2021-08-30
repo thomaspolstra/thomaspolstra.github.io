@@ -1,71 +1,76 @@
-<body   style="background-color:white;">
-
-<style>
-li{
-  line-height: 1.75;
-}
-</style>
-
-<style>
-a:link {
-  color: "#232D4B";
-  background-color: transparent;
-  text-decoration: none;
-}
-
-a:visited {
-  color: #E57200;
-  background-color: transparent;
-  text-decoration: none;
-}
-</style>
-
-
+<html>
 <head>
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-146854382-1"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<body topmargin="75">
+<body leftmargin="75">
+<style>
+body {font-family: Arial;}
 
-  gtag('config', 'UA-146854382-1');
-</script>
-<title>Thomas Polstra</title>
-<h1>Thomas Polstra</h1>
+/* Style the tab */
+.tab {
+  overflow: hidden;
+  border: 1px solid #ccc;
+  background-color: #f1f1f1;
+}
+
+/* Style the buttons inside the tab */
+.tab button {
+  background-color: inherit;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  transition: 0.3s;
+  font-size: 17px;
+}
+
+/* Change background color of buttons on hover */
+.tab button:hover {
+  background-color: #ddd;
+}
+
+/* Create an active/current tablink class */
+.tab button.active {
+  background-color: #ccc;
+}
+
+/* Style the tab content */
+.tabcontent {
+  display: none;
+  padding: 6px 12px;
+  border: 1px solid #ccc;
+  border-top: none;
+}
+</style>
 </head>
+<body>
 
+<center><h1>Thomas Polstra</h1></center>
 
-
-<img align="right" border="2" src="newphoto.jpg" style="width:320px;height:400px;">
-
-
-
-
-
-<p>
-Office: 131 Kerchof Hall
-<br>
-Email: tp2tt@virginia.edu
-<br>
-<a href="ThomasPolstraCV.pdf">Curriculum Vitae</a>
-</p>
-
+<img  src="MSRIlogo.png" style="width:375px;height:101px">  <center><img  border="2" src="newphoto.jpg" style="width:320px;height:400px;"></center> 
 
 
 <hr>
 
-<h3>About me</h3>
 <p style="font-size:15px">
-I am a commutative algebraist, member of the Mathematical Sciences Research Institute in Berkeley, California, and academic visitor at the University of Virginia. 
+I am an offsite Simons postdoctoral fellow at the Mathematical Sciences Research Institute (MSRI) in Berkeley, California and a visiting scholar at the University of Virginia.
+My reserach interests are in commutative algebra. Prior to my postdoctoral position at MSRI I was a research associate lecturer at the University of Virginia, NSF postdoctoral fellow at the University of Utah, and a graduate student 
+at the University of Missouri. I am funded by NSF standard grant #2101890. I am currently on the academic job market.
 </p>
 <hr>
 
 
-<h3>Publications and preprints</h3>
-<ol>
+<div class="tab">
+  <button class="tablinks" onclick="openCity(event, 'Publications and Preprints')">Publications and Preprints</button>
+  <button class="tablinks" onclick="openCity(event, 'Teaching')">Teaching</button>
+  <button class="tablinks" onclick="openCity(event, 'Curriculum Vitae')">Curriculum Vitae</button>
+  <button class="tablinks" onclick="openCity(event, 'Contact Information')">Contact Information</button>
+</div>
 
-
+<div id="Publications and Preprints" class="tabcontent">
+  <h3>Publications and Preprints</h3>
+  
 <li style="font-size:15px">
 <a href=LCBoundsDim4.pdf><i>Local Cohomology Bounds and the Weak Implies Strong Conjecture in dimension 4</a>,  with Ian Aberbach, <br>submitted.
 </li>
@@ -82,10 +87,10 @@ I am a commutative algebraist, member of the Mathematical Sciences Research Inst
 <a href=https://arxiv.org/abs/1909.11231>Local cohomology bounds and test ideals</a>, with Ian Aberbach, <br>preliminary version.
 </li>
 <li style="font-size:15px">
-<a href=https://arxiv.org/abs/1908.01416>Covers of rational double points in mixed characteristic</a>, with Javier Carvajal-Rojas, Linquan Ma, Kevin Tucker, and Karl Schwede, <br>submitted.
+<a href=https://arxiv.org/abs/1811.11022>Global <i>F</i>-splitting ratio</a>,with Alessandro De Stefani and Yongwei Yao, <br>submitted.
 </li>
 <li style="font-size:15px">
-<a href=https://arxiv.org/abs/1811.11022>Global <i>F</i>-splitting ratio</a>,with Alessandro De Stefani and Yongwei Yao, <br>submitted.
+<a href=https://arxiv.org/abs/1908.01416>Covers of rational double points in mixed characteristic</a>, with Javier Carvajal-Rojas, Linquan Ma, Kevin Tucker, and Karl Schwede, <br>To appear in the Journal of Singularities.
 </li>
 <li style="font-size:15px">
 <a href=https://arxiv.org/abs/2002.04661>A theorem about maximal Cohen-Macaulay modules</a>, <br>to appear in Int. Math. Res. Not.
@@ -131,18 +136,9 @@ De Stefani and Yongwei Yao,<br> Proc. Amer. Math. Soc.  146  (2018),  no. 4, 141
 Journal of Pure and Applied Algebra, 218: 1537-1543, 2014.
 </li>
 </ol>
-	
-<hr>
+</div>
 
-
-<center> <img src="MSRIlogo.png">  </center>
-
-
-
-</body>
-
-
-<!--
+<div id="Teaching" class="tabcontent">
 <h3>Teaching</h3>
 
 <h4>At the University of Virginia</h4>
@@ -185,15 +181,37 @@ MATH 1100 (College Algebra) Instructor, Fall 2013, Fall 2014.
 <br>
 MATH 0110 (Intermediate Algebra) Instructor, Spring 2014.
 </p>
+</div>
+
+<div id="Curriculum Vitae" class="tabcontent">
+  <center><embed src="ThomasPolstraCV.pdf" width="800px" height="2100px" /></center>
+</div>
+
+<div id="Contact Information" class="tabcontent">
+  <p>Email: tp2tt@virginia.edu</p>
+  <p>Office: Kerchoff 201 (University of Virginia)</p>
+  </div>
+
+<script>
+function openCity(evt, cityName) {
+  var i, tabcontent, tablinks;
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablinks");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" active", "");
+  }
+  document.getElementById(cityName).style.display = "block";
+  evt.currentTarget.className += " active";
+}
+</script>
 
 
+<br>
 
-
-<hr>
-
-
--->
-
-
-
-
+<center><img src="uvalogo.png" style="width:294px;height:200px;"></center>
+   
+</body>
+</html>
